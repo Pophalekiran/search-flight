@@ -22,12 +22,12 @@ public class FlightServiceHandlerImpl implements FlightServiceHandler {
     }
 
     private int compareByPriceAndDepartureTime(Flight flight, Flight flight1){
-        Double aDouble = flight.getPrice()-flight1.getPrice();
-        if(aDouble!=0){
-            return aDouble.intValue();
+        int compariosion = flight.getPrice().compareTo(flight1.getPrice());
+        if(compariosion!=0){
+            return compariosion;
         }
-        long diffInMillies = flight.getDepartureTime().getTime() - flight1.getDepartureTime().getTime();
-        return (int)diffInMillies ;
+        compariosion = flight.getDepartureTime().compareTo(flight1.getDepartureTime());
+        return compariosion ;
     }
 
 }

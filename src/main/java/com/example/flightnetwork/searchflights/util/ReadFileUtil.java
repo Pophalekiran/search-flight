@@ -21,8 +21,6 @@ public class ReadFileUtil {
         Integer i = 1;
         while (i <= 2) {
             try {
-                //CSVReader reader = new CSVReader(new FileReader("F:\\WorkSpace\\JavaWorkSpace\\Intellij_WorkSpace\\search-flights\\src\\main\\resources\\data\\Provider" + i + ".csv"), );
-                // CSVReader reader = new CSVReader(new FileReader("F:\\WorkSpace\\JavaWorkSpace\\Intellij_WorkSpace\\search-flights\\src\\main\\resources\\data\\TestData.csv"),'\t'x );
                 CSVReader reader = new CSVReader(new FileReader(ResourceUtils.getFile("classpath:data/Provider" + i + ".csv")));
                 String[] nextLine;
                 reader.readNext();
